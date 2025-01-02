@@ -12,6 +12,8 @@
     --drawerColor: rgba(30, 40, 54, 0.9);
     --lighterBorderColor: rgb(255 255 255 / 20%);
     --selectorBackgroundColor: rgb(55, 65, 81);
+    --btnPlayColor: 34 197 94;
+    --btnPlayBorderColor: rgb(74, 222, 128);
     --btnDeleteColor: rgb(169, 29, 29);
     --btnDeleteBorderColor: rgb(217, 84, 84);
     --btnSubmitColor: rgb(61, 54, 178);
@@ -154,15 +156,15 @@ html {
 
 .cardOverlayContainer>.cardOverlayFab-primary,
 .listItemImageButton {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(var(--btnPlayColor) / 0.9);
     color: var(--textColor);
-    border: solid var(--borderColor) var(--borderWidth);
-    font-size: 75%;
+    border: solid var(--btnPlayBorderColor) var(--borderWidth);
+    font-size: 80%;
 }
 
 .cardOverlayContainer>.cardOverlayFab-primary:hover,
 .listItemImageButton:hover {
-    background-color: rgba(0, 0, 0, 0.75) !important;
+    background-color: rgb(var(--btnPlayColor) / 0.75) !important;
 }
 
 .layout-desktop .cardOverlayButton-br {
@@ -474,7 +476,7 @@ html {
 
 .itemProgressBarForeground {
     border-radius: var(--largeRadius);
-    background-color: var(--dimTextColor);
+    background-color: var(--btnSubmitBorderColor);
 }
 
 .backgroundProgress>div {
@@ -1330,4 +1332,8 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 
 #scenesContent .cardScalable:hover {
     border-color: var(--dimTextColor) !important;
+}
+
+.progressring-spiner {
+  border-color: var(--btnSubmitBorderColor);
 }
